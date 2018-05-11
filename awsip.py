@@ -9,7 +9,7 @@ URL = 'https://ip-ranges.amazonaws.com/ip-ranges.json'
 response = urllib.request.urlopen(URL)
 data = json.loads(response.read())
 
-mtl = open("mikrotikaws.txt", "w")
+mtl = open("mikrotikaws.rsc", "w")
 
 for reg in data['prefixes']:
     if reg['region'] == 'us-west-1':      # change region depending on your preference ("us-west-1")
